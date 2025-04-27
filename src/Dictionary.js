@@ -8,16 +8,15 @@ export default function Dictionary() {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    setResults(response.data[0]);
+    setResults(response.data);
   }
 
   function search(event) {
     event.preventDefault();
+    let key = "260420cae416f4dteddo330fbd8c9c7b";
+    let url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key}`;
+    axios.get(url).then(handleResponse);
   }
-
-  let key = "260420cae416f4dteddo330fbd8c9c7b";
-  let url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key}`;
-  axios.get(url).then(handleResponse);
 
   function handleWordChange(event) {
     setWord(event.target.value);
