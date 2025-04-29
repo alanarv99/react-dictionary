@@ -9,6 +9,6 @@ export default function Synonyms(props) {
       </span>
     );
   } else {
-    return <span className="noSynonym">Synonyms not available</span>;
+    return <span className="noSynonym">Synonyms are not available</span>;
   }
 }
