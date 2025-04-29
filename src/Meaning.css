@@ -1,0 +1,28 @@
+.Meaning {
+  text-align: left;
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: #5d252c5a;
+  border: 3px black dotted;
+  border-radius: 5px;
+}
+.partOfSpeech {
+  font-size: 20px;
+  font-weight: bold;
+}
+.definition {
+  font-size: 20px;
+  font-weight: 600;
+}
+.example {
+  font-style: italic;
+  font-weight: 400;
+}
+.noExample {
+  color: grey;
+  font-style: italic;
+  font-weight: 400;
+}
+.underline {
+  text-decoration: underline;
+}
