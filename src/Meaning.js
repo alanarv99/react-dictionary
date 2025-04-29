@@ -8,7 +8,7 @@ export default function Meaning(props) {
       return <span className="example">Example: {props.meaning.example} </span>;
     } else return <span className="noExample">Example not available</span>;
   }
-  console.log({ props });
+
   return (
     <div className="Meaning">
       <h4 className="partOfSpeech">{props.meaning.partOfSpeech}</h4>
