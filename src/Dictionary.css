@@ -1,4 +1,17 @@
 .searchBar {
   width: 400px;
   margin-right: 10px;
+  border-radius: 7px;
+  padding: 6px;
+}
+
+.findOut {
+  border-radius: 7px;
+  padding: 6px;
+}
+
+.findOut:hover {
+  background-color: black;
+  color: lightgrey;
+  font-weight: 600;
 }

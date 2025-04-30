@@ -30,7 +30,7 @@ export default function Dictionary() {
           className="searchBar"
           onChange={handleWordChange}
         />
-        <input type="submit" value="Find out" />
+        <input type="submit" value="Find out" className="findOut" />
       </form>
       <Results results={results} />
     </div>

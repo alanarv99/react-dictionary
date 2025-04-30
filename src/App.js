@@ -10,7 +10,9 @@ export default function App() {
       </main>
       <footer>
         Coded by Alana Vazquez and open-sourced on{" "}
-        <a href="https://github.com/alanarv99/react-dictionary">Github</a>
+        <a href="https://github.com/alanarv99/react-dictionary" target="blank">
+          Github
+        </a>
       </footer>
     </div>
   );

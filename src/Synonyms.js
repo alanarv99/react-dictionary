@@ -4,9 +4,18 @@ import "./Synonyms.css";
 export default function Synonyms(props) {
   if (props.synonyms) {
     return (
-      <span className="synonyms">
-        Synonyms: <li>{props.synonyms}</li>{" "}
-      </span>
+      <div className="Synonyms">
+        Synonyms:
+        <ul>
+          {props.synonyms.map(function (synonym, index) {
+            return (
+              <li key={index} className="Syn">
+                {synonym}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   } else {
     return <span className="noSynonym">Synonyms are not available</span>;
