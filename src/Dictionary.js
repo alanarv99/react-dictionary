@@ -1,21 +1,31 @@
 import React, { useState } from "react";
 import Results from "./Results";
+import Images from "./Images";
 import axios from "axios";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
   let [results, setResults] = useState(null);
+  let [images, setImages] = useState(null);
 
   function handleResponse(response) {
     setResults(response.data);
   }
 
+  function handleImageResponse(response) {
+    setImages(response.data.photos);
+  }
+
   function search(event) {
     event.preventDefault();
-    let key = "260420cae416f4dteddo330fbd8c9c7b";
-    let url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key}`;
-    axios.get(url).then(handleResponse);
+    let wordKey = "260420cae416f4dteddo330fbd8c9c7b";
+    let wordUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${wordKey}`;
+    axios.get(wordUrl).then(handleResponse);
+
+    let imageKey = "260420cae416f4dteddo330fbd8c9c7b";
+    let imageUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${imageKey}`;
+    axios.get(imageUrl).then(handleImageResponse);
   }
 
   function handleWordChange(event) {
@@ -33,6 +43,7 @@ export default function Dictionary() {
         <input type="submit" value="Find out" className="findOut" />
       </form>
       <Results results={results} />
+      <Images images={images} />
     </div>
   );
 }
