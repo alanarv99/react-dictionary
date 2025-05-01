@@ -16,6 +16,7 @@ export default function Images(props) {
                     src={image.src.portrait}
                     className="img-fluid"
                     key={index}
+                    alt="Dictionary Image"
                   />
                 </a>
               </div>
