@@ -11,7 +11,7 @@ export default function Images(props) {
           {props.images.map(function (image, index) {
             return (
               <div className="col-4">
-                <a href={image.src.original} target="blank" rel="noreferrer">
+                <a href={image.src.original} target="blank">
                   <img
                     src={image.src.portrait}
                     className="img-fluid"
