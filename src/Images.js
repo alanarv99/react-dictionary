@@ -3,8 +3,6 @@ import "./Images.css";
 
 export default function Images(props) {
   if (props.images) {
-    console.log(props.images[0].src.landscape);
-
     return (
       <section className="Images">
         <div className="row">
@@ -14,9 +12,9 @@ export default function Images(props) {
                 <a href={image.src.original} target="blank">
                   <img
                     src={image.src.portrait}
-                    className="img-fluid"
                     key={index}
-                    alt="Dictionary Image"
+                    className="img-fluid"
+                    alt="Dictionary"
                   />
                 </a>
               </div>
